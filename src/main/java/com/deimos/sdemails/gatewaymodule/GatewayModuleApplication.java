@@ -7,6 +7,7 @@ import reactor.core.publisher.Mono;
 
 
 @SpringBootApplication
+@ComponentScan("com.deimos.sdemails")
 public class GatewayModuleApplication {
 
 	public static void main(String[] args) {
