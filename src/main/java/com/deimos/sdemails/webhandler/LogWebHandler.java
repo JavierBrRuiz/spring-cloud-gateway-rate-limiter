@@ -21,8 +21,8 @@ public class LogWebHandler implements WebHandler {
     @Override
     public Mono<Void> handle(ServerWebExchange exchange) {
         log.info("before dispatch");
-        defaultHandler.handle(exchange);
+        Mono<Void> result = defaultHandler.handle(exchange);
         log.info("after dispatch");
-        return Mono.empty();
+        return result;
     }
 }
