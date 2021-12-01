@@ -1,0 +1,28 @@
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  cloud:
+    gateway:
+      routes:
+        - id: basic
+          uri: http://localhost:8080/api
+          predicates:
+            - Path=/api
+            - Header=Authorization, qtjc5nc3nacfrvh4iq7rvbinp6
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 10
+                redis-rate-limiter.burstCapacity: 20
+
+        - id: standard
+          uri: http://localhost:8080/api
+          predicates:
+            - Path=/api
+            - Header=Authorization, pi2ve1jm3upl2l1dtj56an7kqe
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 0

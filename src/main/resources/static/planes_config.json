@@ -1,0 +1,38 @@
+[
+  {
+    "name": "facturas",
+    "facturas": {
+      "defaultLimits": {
+        "replenish": 25,
+        "burst": 40
+      },
+      "extendedLimit": {
+        "week": "first",
+        "days": "all",
+        "hours": "all",
+        "replenish": 70,
+        "burst": 100
+      }
+    }
+  },
+  {
+    "name": "open-close",
+    "open-close": {
+      "defaultLimits": {
+        "replenish": 100,
+        "burst": 170
+      },
+      "extendedLimit": {
+        "week": "all",
+        "days": {
+          "monday": {
+            "start": "10:00:00.000Z",
+            "end": "12:00:00.000Z"
+          }
+        },
+        "replenish": 150,
+        "burst": 215
+      }
+    }
+  }
+]

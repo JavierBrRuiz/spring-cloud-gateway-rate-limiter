@@ -1,0 +1,20 @@
+[
+  {
+    "SYSTEM_PK": "223",
+    "SYS_NAME": "DSTEST",
+    "SYS_API_KEY": "qtjc5nc3nacfrvh4iq7rvbinp6",
+    "SYS_SUBACCOUNT_NAME": "deimostest",
+    "SYS_FUNCTIONAL_AREA_NAME": "SSS",
+    "SYS_SERVICE_NAME": "servicio pruebas deimos",
+    "SYS_RATE_LMITER_PLAN": "facturas"
+  },
+  {
+    "SYSTEM_PK": "394",
+    "SYS_NAME": "PHOTOREQUEST_BR",
+    "SYS_API_KEY": "pi2ve1jm3upl2l1dtj56an7kqe",
+    "SYS_SUBACCOUNT_NAME": "digitalchannels",
+    "SYS_FUNCTIONAL_AREA_NAME": "integración",
+    "SYS_SERVICE_NAME": "open/close",
+    "SYS_RATE_LIMITER_PLAN": "open/close"
+  }
+]
