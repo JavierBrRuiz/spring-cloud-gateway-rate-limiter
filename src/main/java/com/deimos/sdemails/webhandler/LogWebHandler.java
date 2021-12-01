@@ -2,7 +2,6 @@ package com.deimos.sdemails.webhandler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.DispatcherHandler;
 import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebHandler;
@@ -20,9 +19,9 @@ public class LogWebHandler implements WebHandler {
 
     @Override
     public Mono<Void> handle(ServerWebExchange exchange) {
-        log.info("before dispatch");
-        defaultHandler.handle(exchange);
-        log.info("after dispatch");
-        return Mono.empty();
+        log.info("before dispatch: " + exchange.getRequest().getHeaders());
+        Mono<Void> result = defaultHandler.handle(exchange);
+        log.info("after dispatch: " + exchange.getResponse().getHeaders());
+        return result;
     }
 }
